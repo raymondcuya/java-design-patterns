@@ -1,8 +1,15 @@
 package com.java.design.patterns.memento;
 
 public class Editor {
+
+    private String content;
+
     public String getContent() {
         return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public EditorState createState() {
@@ -13,9 +20,4 @@ public class Editor {
         content = state.getContent();
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    private String content;
 }

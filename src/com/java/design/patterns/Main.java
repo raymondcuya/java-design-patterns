@@ -1,13 +1,23 @@
 package com.java.design.patterns;
 
+import com.java.design.patterns.memento.Editor;
+import com.java.design.patterns.memento.History;
+
 public class Main {
     public static void main(String[] args) {
-       drawUIControl(new TextBox());
-       drawUIControl(new CheckBox());
-    }
+       var editor = new Editor();
+       var history = new History();
 
-    public static void drawUIControl(UIControl control) {
-        control.draw();
+       editor.setContent("a");
+       history.push(editor.createState());
+
+       editor.setContent("b");
+       history.push(editor.createState());
+
+       editor.setContent("c");
+       editor.restore(history.pop());
+
+        System.out.println(editor.getContent());
     }
 
 }

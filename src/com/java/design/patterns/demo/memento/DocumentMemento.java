@@ -1,4 +1,4 @@
-package com.java.design.patterns.exercise.memento;
+package com.java.design.patterns.demo.memento;
 
 public class DocumentMemento {
     private final String content;

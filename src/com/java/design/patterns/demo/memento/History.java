@@ -1,4 +1,4 @@
-package com.java.design.patterns.exercise.memento;
+package com.java.design.patterns.demo.memento;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

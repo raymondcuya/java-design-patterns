@@ -1,15 +1,17 @@
 package com.java.design.patterns.state.abuse;
 
 public class Stopwatch {
-    private boolean isRunning;
+    private State currentState = new StoppedState(this);
+    public State getCurrentState() {
+        return currentState;
+    }
+
+    public void setCurrentState(State currentState) {
+        this.currentState = currentState;
+    }
+
 
     public void click() {
-        if (isRunning) {
-            isRunning = false;
-            System.out.println("Stopped");
-        } else {
-            isRunning = true;
-            System.out.println("Running");
-        }
+        currentState.click();
     }
 }

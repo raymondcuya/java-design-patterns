@@ -1,4 +1,4 @@
-package com.java.design.patterns.demo.memento;
+package com.java.design.patterns.memento.exercise;
 
 public class Demo {
     public static void main(String[] args) {

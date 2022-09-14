@@ -3,7 +3,7 @@ package com.java.design.patterns.iterator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BrowseHistory {
+public class BrowseHistory implements History<String>{
 
     private List<String> urls = new ArrayList<>();
 
@@ -27,8 +27,8 @@ public class BrowseHistory {
         private BrowseHistory history;
         private int index;
 
-        public ListIterator(BrowseHistory history) {
-            this.history = history;
+        public ListIterator(History history) {
+            this.history = (BrowseHistory) history;
         }
 
         @Override

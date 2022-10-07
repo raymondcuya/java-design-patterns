@@ -1,20 +1,14 @@
 package com.java.design.patterns.strategy.exercise;
 
 public class ChatClient {
-    private String encryptionAlgorithm;
+    private EncryptedAlgorithm algorithm;
 
-    public ChatClient(String encryptionAlgorithm) {
-        this.encryptionAlgorithm = encryptionAlgorithm;
+    public ChatClient(EncryptedAlgorithm algorithm) {
+        this.algorithm = algorithm;
     }
 
     public void send(String message) {
-        if (encryptionAlgorithm == "DES")
-            System.out.println("Encrypting message using DES");
-        else if (encryptionAlgorithm == "AES")
-            System.out.println("Encrypting message using AES");
-        else
-            throw new UnsupportedOperationException("Unsupported encryption algorithm");
-
-        System.out.println("Sending the encrypted message...");
+        var encryptedMessage = algorithm.encrypt(message);
+        System.out.println("Sending the encrypted message... " + encryptedMessage);
     }
 }

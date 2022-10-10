@@ -1,13 +1,7 @@
 package com.java.design.patterns.strategy.exercise;
 
 public class ChatClient {
-    private EncryptedAlgorithm algorithm;
-
-    public ChatClient(EncryptedAlgorithm algorithm) {
-        this.algorithm = algorithm;
-    }
-
-    public void send(String message) {
+    public void send(String message, EncryptedAlgorithm algorithm) {
         var encryptedMessage = algorithm.encrypt(message);
         System.out.println("Sending the encrypted message... " + encryptedMessage);
     }

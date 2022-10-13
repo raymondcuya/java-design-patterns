@@ -1,4 +1,4 @@
-package com.java.design.patterns.template;
+package com.java.design.patterns.template.pattern;
 
 public class GenerateReportTasks {
     private AuditTrail auditTrail;

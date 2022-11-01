@@ -1,4 +1,4 @@
-package com.java.design.patterns.command;
+package com.java.design.patterns.command.composite;
 
 import com.java.design.patterns.command.fx.Command;
 

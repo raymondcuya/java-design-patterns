@@ -1,6 +1,10 @@
 package com.java.design.patterns.mediator;
 
 public class TextBox extends UIControl {
+    public TextBox(DialogBox owner) {
+        super(owner);
+    }
+
     private String content;
 
     public String getContent() {
@@ -9,5 +13,6 @@ public class TextBox extends UIControl {
 
     public void setContent(String content) {
         this.content = content;
+        owner.changed(this);
     }
 }

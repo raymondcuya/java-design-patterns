@@ -1,6 +1,10 @@
 package com.java.design.patterns.mediator;
 
 public class Button extends UIControl {
+    public Button(DialogBox owner) {
+        super(owner);
+    }
+
     private boolean isEnabled;
 
     public boolean isEnabled() {
@@ -9,5 +13,6 @@ public class Button extends UIControl {
 
     public void setEnabled(boolean enabled) {
         isEnabled = enabled;
+        owner.changed(this);
     }
 }

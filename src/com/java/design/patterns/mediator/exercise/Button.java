@@ -1,0 +1,13 @@
+package com.java.design.patterns.mediator.exercise;
+
+public class Button extends UIControl {
+    private boolean isEnabled;
+
+    public boolean isEnabled() {
+        return isEnabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        isEnabled = enabled;
+    }
+}

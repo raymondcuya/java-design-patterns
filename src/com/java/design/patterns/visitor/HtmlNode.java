@@ -1,5 +1,5 @@
 package com.java.design.patterns.visitor;
 
 public interface HtmlNode {
-    void highlight();
+    void execute(Operation operation);
 }

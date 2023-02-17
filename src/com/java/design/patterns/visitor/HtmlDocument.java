@@ -9,10 +9,9 @@ public class HtmlDocument {
     public void add(HtmlNode node) {
         nodes.add(node);
     }
-
-    public void hightlight() {
-        for (var node: nodes) {
-            node.highlight();
-        }
+    void execute(Operation operation) {
+        for (var node: nodes)
+            node.execute(operation);
     }
+
 }

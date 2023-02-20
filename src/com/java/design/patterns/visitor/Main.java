@@ -5,6 +5,7 @@ public class Main {
         var document = new HtmlDocument();
         document.add(new HeadingNode());
         document.add(new AnchorNode());
-        document.hightlight();
+//        document.execute(new HighlightOperation());
+        document.execute(new PlainTextOperation());
     }
 }

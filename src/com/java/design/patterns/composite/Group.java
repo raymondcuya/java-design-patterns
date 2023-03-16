@@ -3,17 +3,20 @@ package com.java.design.patterns.composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Group {
-    private List<Object> shapes = new ArrayList<>();
-    public void add(Object shape) {
-        shapes.add(shape);
+public class Group implements Component {
+    private List<Component> components = new ArrayList<>();
+    public void add(Component component) {
+        components.add(component);
+    }
+    @Override
+    public void render() {
+        for (var component: components)
+            component.render();
     }
 
-    public void render() {
-        for (var object: shapes)
-            if (object instanceof Shape)
-                ((Shape) object).render();
-            else
-                ((Group)object).render();
+    @Override
+    public void move() {
+        for (var component: components)
+            component.move();
     }
 }
